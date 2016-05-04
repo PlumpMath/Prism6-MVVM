@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="ElevatorApp.UI.Views.ElevatorFloorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+            <DockPanel Background="#FFE2D2D2" >
+            <Border BorderThickness="5"  BorderBrush="#FFEADF9C" Background="#FFECECEC">
+            <Grid ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <Grid.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF80B3D4" />
+                        <GradientStop Color="#FF273C64"
+                              Offset="1" />
+                    </RadialGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition  />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition  />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition    />
+                    <ColumnDefinition  />
+                    <ColumnDefinition  />
+
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="FLOOR 12" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="0" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="12D"/>
+                <TextBlock Text="FLOOR 11" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="1" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"  CommandParameter="11U" Cursor="Hand"/>
+                <Button Grid.Row="1" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="11D" Cursor="Hand"/>
+
+
+                <TextBlock Text="FLOOR 10" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="2" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"  CommandParameter="10U" Cursor="Hand"/>
+                <Button Grid.Row="2" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="10D" Cursor="Hand"/>
+
+
+                <TextBlock Text="FLOOR 9" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="3" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="9U" Cursor="Hand"/>
+                <Button Grid.Row="3" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="9D" Cursor="Hand"/>
+
+                <TextBlock Text="FLOOR 8" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="4" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="8U" Cursor="Hand"/>
+                <Button Grid.Row="4" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="8D" Cursor="Hand"/>
+
+                <TextBlock Text="FLOOR 7" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="5" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="7U" Cursor="Hand"/>
+                <Button Grid.Row="5" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="7D" Cursor="Hand"/>
+
+
+                <TextBlock Text="FLOOR 6" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="6" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="6U" Cursor="Hand"/>
+                <Button Grid.Row="6" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="6D"/>
+
+
+                <TextBlock Text="FLOOR 5" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="7" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="5U" Cursor="Hand"/>
+                <Button Grid.Row="7" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="5D" Cursor="Hand"/>
+
+
+                <TextBlock Text="FLOOR 4" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="8" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="4U" Cursor="Hand"/>
+                <Button Grid.Row="8" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="4D" Cursor="Hand"/>
+
+
+                <TextBlock Text="FLOOR 3" Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="9" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="3U" Cursor="Hand"/>
+                <Button Grid.Row="9" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="3D" Cursor="Hand"/>
+
+
+                <TextBlock Text="FLOOR 2" Grid.Row="10" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="10" Grid.Column="1"  Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="2U" Cursor="Hand"/>
+                <Button Grid.Row="10" Grid.Column="2"  Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="2D" Cursor="Hand"/>
+
+                <TextBlock Text="FLOOR 1" Grid.Row="11" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="11" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="1U" />
+                <Button Grid.Row="11" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource DownArrowButtonStyle}" CommandParameter="1D" Cursor="Hand"/>
+
+                <TextBlock Text="Ground Floor" Grid.Row="12" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15"></TextBlock>
+                <Button Grid.Row="12" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding NavigateCommand}" Margin="3" Height="40" Width="60" Style="{StaticResource FloorUpButtonStyle}"   CommandParameter="0U" />
+
+            </Grid>
+        </Border>
+            </DockPanel>
+</UserControl>

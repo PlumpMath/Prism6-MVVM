@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="ElevatorApp.UI.Views.ElevatorMainControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:regions="http://prismlibrary.com/"
+             regions:ViewModelLocator.AutoWireViewModel="True">
+            <Grid>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition  />
+        </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition MaxHeight="100"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15" Opacity="0.85" Text="{Binding ElevatorFloor, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                    <TextBlock Grid.Row="1" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="15" Opacity="0.85" Text="{Binding ElevatorStatus, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                    <TextBlock Grid.Row="2" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="NoWrap" Foreground="#FFC8D5DE"  FontSize="16" Opacity="0.85" Text="{Binding ElevatorDirection, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                </Grid>
+
+                <Border Margin="2,2,8,8"
+                Grid.Row="1"
+                BorderThickness="2,2,2,2"
+                CornerRadius="4,4,4,4"
+                BorderBrush="#FF4355C1">
+                    <ContentControl x:Name="ElevatorIn"
+                            regions:RegionManager.RegionName="ElevatorInRegion"
+                            VerticalContentAlignment="Stretch"
+                            HorizontalContentAlignment="Stretch" Background="#FF7BD9DC" />
+                </Border>
+            </Grid>
+        </Grid>
+            <Grid Grid.Column="1">
+            <Border Margin="2,2,8,8"
+             BorderThickness="2,2,2,2"
+             CornerRadius="4,4,4,4"
+             BorderBrush="#FF4355C1">
+                <ContentControl x:Name="ElevatorFloor"
+                            regions:RegionManager.RegionName="ElevatorFloorRegion"
+                            VerticalContentAlignment="Stretch"
+                            HorizontalContentAlignment="Stretch" Background="#FF7BD9DC" />
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
