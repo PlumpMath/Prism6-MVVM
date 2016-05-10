@@ -222,6 +222,7 @@ namespace ElevatorApp.UI.Controllers
                                         responseMessage.FloorNo = _elevatorService.CurrentFloor;
                                         PublishElevatorMessage(responseMessage);
                                         Thread.Sleep(3000);
+                                        
                                         responseMessage.Direction = EnumElevatorDirection.Up;
                                         responseMessage.Message = EnumElevatorStatus.Hold;
                                         responseMessage.FloorNo = _elevatorService.CurrentFloor;

@@ -30,8 +30,9 @@ namespace ElevatorApp.UI.ViewModels
             this._regionManager = regionManager;
             this._eventAggregator = eventAggregator;
             NavigateCommand = new DelegateCommand<string>(Navigate);
+            this._eventAggregator.GetEvent<ElevatorControlMessageSystemEvent>().Subscribe(UpdateElevatorControlSystem, ThreadOption.BackgroundThread, false);
             logger.Log("ElevatorMainControlViewModel Configured ended", Category.Info, Priority.None);
-            this._eventAggregator.GetEvent<ElevatorControlMessageSystemEvent>().Subscribe(UpdateElevatorControlSystem, ThreadOption.UIThread, true);
+            
         }
 
         #region Properties
@@ -71,7 +72,7 @@ namespace ElevatorApp.UI.ViewModels
             }
             set
             {
-                _elevatorFloor = value;
+                _elevatorStatus = value;
                 SetProperty(ref this._elevatorStatus, value);
                 OnPropertyChanged("ElevatorStatus");
             }

@@ -24,10 +24,24 @@ namespace ElevatorApp.Shell
         /// <summary>
         /// Configures the module catalog. Modularity is a one best approach for big scale projects 
         /// </summary>
+        /// 
+
+        //protected override IModuleCatalog CreateModuleCatalog()
+        //{
+        //    return new AggregateModuleCatalog();
+        //}
         protected override void ConfigureModuleCatalog()
         {
             base.ConfigureModuleCatalog();
+            // Module B and Module D are copied to a directory as part of a post-build step.
+            // These modules are not referenced in the project and are discovered by inspecting a directory.
+            // Both projects have a post-build step to copy themselves into that directory.
+            //DirectoryModuleCatalog directoryCatalog = new DirectoryModuleCatalog() { ModulePath = @".\DirectoryModules" };
+            //((AggregateModuleCatalog)ModuleCatalog).AddCatalog(directoryCatalog);
+
+
             ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+            
             moduleCatalog.AddModule(typeof(ModuleInit));
         }
         protected override DependencyObject CreateShell()
@@ -38,6 +52,9 @@ namespace ElevatorApp.Shell
         {
           Application.Current.MainWindow.Show();
         }
+
+       
+
         protected override ILoggerFacade CreateLogger()
         {
             return new Log4NetLogger();

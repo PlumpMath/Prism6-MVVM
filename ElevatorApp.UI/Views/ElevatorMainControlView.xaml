@@ -32,8 +32,8 @@
                 BorderThickness="2,2,2,2"
                 CornerRadius="4,4,4,4"
                 BorderBrush="#FF4355C1">
-                    <ContentControl x:Name="ElevatorIn"
-                            regions:RegionManager.RegionName="ElevatorInRegion"
+                    <ContentControl x:Name="Elevator"
+                            regions:RegionManager.RegionName="ElevatorRegion"
                             VerticalContentAlignment="Stretch"
                             HorizontalContentAlignment="Stretch" Background="#FF7BD9DC" />
                 </Border>

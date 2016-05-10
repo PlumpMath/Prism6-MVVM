@@ -69,15 +69,15 @@ namespace ElevatorApp.UI
             this._container.RegisterTypeForNavigation<ElevatorDoorView>("ElevatorDoorView");
 
 
+            this._regionManager.RegisterViewWithRegion(RegionNames.ElevatorRegion,
+                                                      () => this._container.Resolve<ElevatorDoorView>());
             this._regionManager.RegisterViewWithRegion(RegionNames.ElevatorInRegion,
                                                        () => this._container.Resolve<ElevatorView>());
-            this._regionManager.RegisterViewWithRegion(RegionNames.ElevatorInRegion,
-                                                      () => this._container.Resolve<ElevatorDoorView>());
             this._regionManager.RegisterViewWithRegion(RegionNames.ElevatorFloorRegion,
                                                        () => this._container.Resolve<ElevatorFloorView>());
 
             //TODO: Develop a Door functionality
-            //this.regionManager.RequestNavigate(RegionNames.ElevatorInRegion, "ElevatorDoorView");
+            this._regionManager.RequestNavigate(RegionNames.ElevatorInRegion, "ElevatorDoorView");
 
             this._elevatorSystemController = this._container.Resolve<ElevatorSystemController>();
 

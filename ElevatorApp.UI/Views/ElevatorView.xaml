@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
-
-    <DockPanel Width="300" Height="300" Background="#FFE2D2D2" >
+    <DockPanel Width="170" Height="420" Background="#FFE2D2D2" >
         <Border CornerRadius="4,4,0,0" BorderBrush="#FF0254B4" BorderThickness="1" VerticalAlignment="Top">
             <Grid>
                 <Grid.RowDefinitions>
@@ -13,29 +12,27 @@
                     <RowDefinition />
                     <RowDefinition  />
                     <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition  />
-                    <ColumnDefinition  />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="1" >1</Button>
-                <Button Grid.Row="0" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="2">2</Button>
-                <Button Grid.Row="0" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="3">3</Button>
-                <Button Grid.Row="1" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="4">4</Button>
-                <Button Grid.Row="1" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="5">5</Button>
-                <Button Grid.Row="1" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="6">6</Button>
-                <Button Grid.Row="2" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="7">7</Button>
-                <Button Grid.Row="2" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="8">8</Button>
-                <Button Grid.Row="2" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="9">9</Button>
-                <Button Grid.Row="3" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="10">10</Button>
-                <Button Grid.Row="3" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="11">11</Button>
-                <Button Grid.Row="3" Grid.Column="2" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="12">12</Button>
-                <Button Grid.Row="4" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="0">0</Button>
-                <!--<Button Grid.Row="4" Grid.Column="1" Command="{Binding NavigateCommand}" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="H">Help</Button>
-                <Button Grid.Row="4" Grid.Column="2" Command="{Binding NavigateCommand}" Style="{StaticResource RoundCorner}" Height="50" Width="50" FontSize="20" CommandParameter="E">Emergency</Button>-->
+                <ToggleButton  Grid.Row="0" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked1}" Height="50" Width="50" FontSize="20" CommandParameter="1">1 </ToggleButton>
+                <ToggleButton Grid.Row="0" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked2}" Height="50" Width="50" FontSize="20" CommandParameter="2">2</ToggleButton>
+                <ToggleButton Grid.Row="1" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked3}" Height="50" Width="50" FontSize="20" CommandParameter="3">3</ToggleButton>
+                <ToggleButton Grid.Row="1" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked4}" Height="50" Width="50" FontSize="20" CommandParameter="4">4</ToggleButton>
+                <ToggleButton Grid.Row="2" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked5}" Height="50" Width="50" FontSize="20" CommandParameter="5">5</ToggleButton>
+                <ToggleButton Grid.Row="2" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked6}" Height="50" Width="50" FontSize="20" CommandParameter="6">6</ToggleButton>
+                <ToggleButton Grid.Row="3" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked7}" Height="50" Width="50" FontSize="20" CommandParameter="7">7</ToggleButton>
+                <ToggleButton Grid.Row="3" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked8}" Height="50" Width="50" FontSize="20" CommandParameter="8">8</ToggleButton>
+                <ToggleButton Grid.Row="4" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked9}" Height="50" Width="50" FontSize="20" CommandParameter="9">9</ToggleButton>
+                <ToggleButton Grid.Row="4" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked10}" Height="50" Width="50" FontSize="20" CommandParameter="10">10</ToggleButton>
+                <ToggleButton Grid.Row="5" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked11}" Height="50" Width="50" FontSize="20" CommandParameter="11">11</ToggleButton>
+                <ToggleButton Grid.Row="5" Grid.Column="1" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked12}" Height="50" Width="50" FontSize="20" CommandParameter="12">12</ToggleButton>
+                <ToggleButton Grid.Row="6" Grid.Column="0" Command="{Binding NavigateCommand}" Margin="5" Style="{StaticResource RoundCorner}" IsChecked="{Binding IsChecked0}" Height="50" Width="50" FontSize="20" CommandParameter="0">0</ToggleButton>
             </Grid>
-
         </Border>
     </DockPanel>
 </UserControl>
