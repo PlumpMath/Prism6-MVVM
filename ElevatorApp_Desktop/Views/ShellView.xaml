@@ -57,7 +57,17 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Storyboard x:Key="Movement">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Banner">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="152.712"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Movement}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
         <Grid.Background>
             <RadialGradientBrush>
@@ -70,12 +80,12 @@
             <RowDefinition Height="100" />
             <RowDefinition />
         </Grid.RowDefinitions>
-   
+
         <!-- App Banner -->
         <Canvas x:Name="Banner"
                 Grid.Row="0"
                 Grid.Column="0"
-                RenderTransformOrigin="0.5,0.5">
+                RenderTransformOrigin="0.5,0.5" Margin="0,-156.348,0,0" Height="100" VerticalAlignment="Top">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform />
@@ -86,7 +96,7 @@
             </Canvas.RenderTransform>
             <TextBlock Canvas.Top="10"
                        Canvas.Left="15"
-                       Text="Olmec-UK "
+                       Text="Elevator "
                        TextWrapping="NoWrap"
                        Foreground="#FFBBD3EF"
                        FontSize="48"
@@ -95,7 +105,7 @@
                        FontWeight="Bold" />
             <TextBlock Canvas.Top="30"
                        Canvas.Left="400"
-                       Text="Quality through innovation"
+                       Text="Desktop Application"
                        TextWrapping="NoWrap"
                        Foreground="#FFC8D5DE"
                        FontSize="20"
@@ -128,5 +138,5 @@
                             VerticalContentAlignment="Stretch"
                             HorizontalContentAlignment="Stretch" Background="#FF7BD9DC" />
         </Border>
-     </Grid>
-</Window>
+    </Grid>
+</Window>   
